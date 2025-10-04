@@ -735,8 +735,11 @@ body.active { overflow: hidden; }
 }
 
 .food-menu-list {
-  display: grid;
+  display: flex;
   gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 40px;
 }
 
 .food-menu-card {
@@ -842,6 +845,11 @@ body.active { overflow: hidden; }
 .food-menu-card .price { color: var(--deep-saffron); }
 
 .food-menu-card .del { color: var(--gray-x-11-gray); }
+
+.food-menu-list > li {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
 
 
 
@@ -1089,8 +1097,11 @@ body.active { overflow: hidden; }
 }
 
 .blog-list {
-  display: grid;
+  display: flex;
   gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 40px;
 }
 
 .blog-card {
@@ -1218,6 +1229,11 @@ body.active { overflow: hidden; }
   gap: 10px;
 }
 
+.blog-list > li {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
 
 
 
@@ -1246,6 +1262,7 @@ body.active { overflow: hidden; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  height: 100%;
 }
 
 .author-card:hover {
@@ -1274,6 +1291,9 @@ body.active { overflow: hidden; }
 .author-content {
   padding: 30px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .author-name {
@@ -1285,6 +1305,7 @@ body.active { overflow: hidden; }
   color: var(--sonic-silver);
   margin-block-end: 25px;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .author-content .btn-link {
@@ -1298,6 +1319,8 @@ body.active { overflow: hidden; }
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .author-content .btn-link:hover {
@@ -1591,10 +1614,7 @@ textarea.input-field {
     min-width: auto;
   }
 
-  .food-menu-list {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  .food-menu-list > li { min-width: calc(50% - 5px); }
 
   .food-menu-card {
     padding: 15px;
@@ -1873,7 +1893,7 @@ textarea.input-field {
    * BLOG
    */
 
-  .blog-list { grid-template-columns: 1fr 1fr; }
+  .blog-list > li { min-width: calc(50% - 5px); }
 
   .blog-card { height: 100%; }
 
@@ -1989,7 +2009,7 @@ textarea.input-field {
    * FOOD MENU
    */
 
-  .food-menu-list { grid-template-columns: repeat(3, 1fr); }
+  .food-menu-list > li { min-width: calc(33.33% - 6.66px); }
 
   .food-menu-card { height: 100%; }
 
@@ -2033,7 +2053,7 @@ textarea.input-field {
    * BLOG
    */
 
-  .blog-list { grid-template-columns: repeat(3, 1fr); }
+  .blog-list > li { min-width: calc(33.33% - 6.66px); }
 
   .blog-card .card-title { --fs-3: 2.2rem; }
 
