@@ -79,7 +79,6 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-hover">Commander</button>
 
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
@@ -134,9 +133,8 @@
 
             <h2 class="h1 hero-title">Les meilleures frites du campus !</h2>
 
-            <p class="hero-text">Frit'Int est le club du BDE FISA dirigé par Nassim et Chadi, spécialisé dans la production de frites artisanales.</p>
+            <p class="hero-text">Frit'Int est le club du BDE FISA dirigé par Nassim et Chadi, spécialisé dans la production de frites.</p>
 
-            <button class="btn">Commander</button>
 
           </div>
 
@@ -212,10 +210,10 @@
                   </svg>
                 </div>
 
-                <h3 class="h3 card-title">Boissons</h3>
+                <h3 class="h3 card-title">Frites Gaufres</h3>
 
                 <p class="card-text">
-                  Accompagnez vos frites avec nos boissons rafraîchissantes sélectionnées.
+                  Nos frites en forme de gaufres pour une expérience unique et originale.
                 </p>
 
                 <img src="./assets/images/promo-2.png" width="300" height="300" loading="lazy" alt="Soft Drinks"
@@ -273,10 +271,10 @@
                   </svg>
                 </div>
 
-                <h3 class="h3 card-title">Frites au Fromage</h3>
+                <h3 class="h3 card-title">Frites Double Cuisson Belges</h3>
 
                 <p class="card-text">
-                  Nos frites nappées de fromage fondu pour une expérience gourmande incomparable.
+                  Nos frites belges authentiques avec une double cuisson pour une texture parfaite et un goût incomparable.
                 </p>
 
                 <img src="./assets/images/promo-4.png" width="300" height="300" loading="lazy" alt="Burger Kingo"
@@ -304,10 +302,10 @@
                   </svg>
                 </div>
 
-                <h3 class="h3 card-title">Frites Sweet Potato</h3>
+                <h3 class="h3 card-title">Frites au Fromage</h3>
 
                 <p class="card-text">
-                  Nos frites de patates douces offrent une alternative délicieuse et plus saine.
+                  Nos frites nappées de fromage fondu pour une expérience gourmande incomparable.
                 </p>
 
                 <img src="./assets/images/promo-5.png" width="300" height="300" loading="lazy" alt="Chicken Masala"
@@ -349,7 +347,7 @@
 
             <p class="section-text">
               Frit'Int est un club du Bureau des Étudiants FISA dirigé par Nassim et Chadi. Nous nous spécialisons 
-              actuellement dans la production de frites artisanales de qualité. À l'avenir, nous ouvrirons nos portes 
+              actuellement dans la production de frites de qualité. À l'avenir, nous ouvrirons nos portes 
               aux autres formes de la pomme de terre pour diversifier notre offre.
             </p>
 
@@ -376,12 +374,11 @@
               <li class="about-item">
                 <ion-icon name="checkmark-outline"></ion-icon>
 
-                <span class="span">Livraison rapide sur le campus</span>
+                <span class="span">Service rapide sur le campus</span>
               </li>
 
             </ul>
 
-            <button class="btn btn-hover">Commander</button>
 
           </div>
 
@@ -406,45 +403,52 @@
           </h2>
 
           <p class="section-text">
-            Découvrez notre sélection de frites artisanales préparées avec des ingrédients frais et de qualité.
+            Découvrez notre sélection de frites préparées avec des ingrédients frais et de qualité.
           </p>
 
           <ul class="fiter-list">
 
             <li>
-              <button class="filter-btn  active">Tout</button>
+              <button class="filter-btn active" data-filter="all">Tout</button>
             </li>
 
             <li>
-              <button class="filter-btn">Classiques</button>
+              <button class="filter-btn" data-filter="classiques">Classiques</button>
             </li>
 
             <li>
-              <button class="filter-btn">Épicées</button>
+              <button class="filter-btn" data-filter="epicees">Épicées</button>
             </li>
 
             <li>
-              <button class="filter-btn">Boissons</button>
+              <button class="filter-btn" data-filter="belges">Belges</button>
             </li>
 
             <li>
-              <button class="filter-btn">Spéciales</button>
+              <button class="filter-btn" data-filter="fromage">Fromage</button>
+            </li>
+
+            <li>
+              <button class="filter-btn" data-filter="gaufres">Gaufres</button>
+            </li>
+
+            <li>
+              <button class="filter-btn" data-filter="boissons">Boissons</button>
             </li>
 
           </ul>
 
           <ul class="food-menu-list">
 
-            <li>
+            <li data-filter="classiques">
               <div class="food-menu-card">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-1.png" width="300" height="300" loading="lazy"
-                    alt="Fried Chicken Unlimited" class="w-100">
+                    alt="Frites Classiques" class="w-100">
 
                   <div class="badge">-15%</div>
 
-                  <button class="btn food-menu-btn">Commander</button>
                 </div>
 
                 <div class="wrapper">
@@ -461,29 +465,18 @@
 
                 <h3 class="h3 card-title">Frites Classiques</h3>
 
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price">$49.00</data>
-
-                  <del class="del" value="69.00">$69.00</del>
-
-                </div>
-
               </div>
             </li>
 
-            <li>
+            <li data-filter="epicees">
               <div class="food-menu-card">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
-                    alt="Burger King Whopper" class="w-100">
+                    alt="Frites Épicées" class="w-100">
 
                   <div class="badge">-10%</div>
 
-                  <button class="btn food-menu-btn">Commander</button>
                 </div>
 
                 <div class="wrapper">
@@ -500,29 +493,46 @@
 
                 <h3 class="h3 card-title">Frites Épicées</h3>
 
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price" value="29.00">$29.00</data>
-
-                  <del class="del">$39.00</del>
-
-                </div>
-
               </div>
             </li>
 
-            <li>
+            <li data-filter="belges">
               <div class="food-menu-card">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-3.png" width="300" height="300" loading="lazy"
-                    alt="White Castle Pizzas" class="w-100">
+                    alt="Frites Double Cuisson Belges" class="w-100">
 
                   <div class="badge">-25%</div>
 
-                  <button class="btn food-menu-btn">Commander</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Frites</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Frites Double Cuisson Belges</h3>
+
+              </div>
+            </li>
+
+            <li data-filter="fromage">
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
+                    alt="Frites au Fromage" class="w-100">
+
+                  <div class="badge">-20%</div>
+
                 </div>
 
                 <div class="wrapper">
@@ -539,68 +549,18 @@
 
                 <h3 class="h3 card-title">Frites au Fromage</h3>
 
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price" value="49.00">$49.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
-
               </div>
             </li>
 
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
-                    alt="Bell Burrito Supreme" class="w-100">
-
-                  <div class="badge">-20%</div>
-
-                  <button class="btn food-menu-btn">Commander</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">Frites</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title">Frites Sweet Potato</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price" value="59.00 ">$59.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
+            <li data-filter="gaufres">
               <div class="food-menu-card">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
-                    alt="Kung Pao Chicken BBQ" class="w-100">
+                    alt="Frites Gaufres" class="w-100">
 
                   <div class="badge">-5%</div>
 
-                  <button class="btn food-menu-btn">Commander</button>
                 </div>
 
                 <div class="wrapper">
@@ -615,35 +575,24 @@
                   </div>
                 </div>
 
-                <h3 class="h3 card-title">Frites BBQ</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price" value="49.00">$49.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
+                <h3 class="h3 card-title">Frites Gaufres</h3>
 
               </div>
             </li>
 
-            <li>
+            <li data-filter="boissons">
               <div class="food-menu-card">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
-                    alt="Wendy's Chicken" class="w-100">
+                    alt="Boissons" class="w-100">
 
                   <div class="badge">-15%</div>
 
-                  <button class="btn food-menu-btn">Commander</button>
                 </div>
 
                 <div class="wrapper">
-                  <p class="category">Frites</p>
+                  <p class="category">Boissons</p>
 
                   <div class="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -654,17 +603,7 @@
                   </div>
                 </div>
 
-                <h3 class="h3 card-title">Frites Croustillantes</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Prix :</p>
-
-                  <data class="price" value="49.00">$49.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
+                <h3 class="h3 card-title">Boissons</h3>
 
               </div>
             </li>
@@ -695,11 +634,10 @@
 
             <p class="section-text">
               Frit'Int est le club du BDE FISA dirigé par Nassim et Chadi, spécialisé dans la production de frites 
-              artisanales de qualité. Nous nous engageons à offrir les meilleures frites du campus avec des ingrédients 
+              de qualité. Nous nous engageons à offrir les meilleures frites du campus avec des ingrédients 
               frais et une préparation soignée.
             </p>
 
-            <button class="btn btn-hover">Commander</button>
           </div>
 
           <figure class="cta-banner">
@@ -727,15 +665,14 @@
           <div class="delivery-content">
 
             <h2 class="h2 section-title">
-              Livraison en un instant au <span class="span">bon moment</span> et au bon endroit
+              Les événements Frit'Int seront communiqués <span class="span">régulièrement</span>
             </h2>
 
             <p class="section-text">
-              Frit'Int s'engage à vous livrer vos frites chaudes et croustillantes directement sur le campus. 
-              Notre service de livraison rapide vous permet de profiter de nos délicieuses frites où que vous soyez.
+              Les événements Frit'Int auront lieu lors des moments clés de l'année pour célébrer ou marquer un temps fort. 
+              Restez connectés pour ne rien manquer de nos événements spéciaux sur le campus.
             </p>
 
-            <button class="btn btn-hover">Commander</button>
           </div>
 
           <figure class="delivery-banner">
@@ -767,7 +704,7 @@
           </h2>
 
           <p class="section-text">
-            Découvrez ce que nos clients pensent de nos délicieuses frites artisanales.
+            Découvrez ce que nos clients pensent de nos délicieuses frites.
           </p>
 
           <ul class="testi-list has-scrollbar">
@@ -782,7 +719,7 @@
                   </figure>
 
                   <div>
-                    <h3 class="h4 testi-name">Robert William</h3>
+                    <h3 class="h4 testi-name">Sami Bouchibo</h3>
 
                     <p class="testi-title">Étudiant FISA</p>
                   </div>
@@ -790,7 +727,7 @@
                 </div>
 
                 <blockquote class="testi-text">
-                  "Les meilleures frites du campus ! Je recommande vivement Frit'Int pour leur qualité et leur service."
+                  "Je valide à fond les frites de Frit'Int ! C'est vraiment excellent, je recommande vivement."
                 </blockquote>
 
                 <div class="rating-wrapper">
@@ -814,15 +751,15 @@
                   </figure>
 
                   <div>
-                    <h3 class="h4 testi-name">Thomas Josef</h3>
+                    <h3 class="h4 testi-name">Émilie</h3>
 
-                    <p class="testi-title">Étudiant FISA</p>
+                    <p class="testi-title">Étudiante FISA</p>
                   </div>
 
                 </div>
 
                 <blockquote class="testi-text">
-                  "Frit'Int a révolutionné ma pause déjeuner ! Des frites toujours chaudes et délicieuses."
+                  "J'aimerais bien des frites au poulet ! C'est une excellente idée pour Frit'Int."
                 </blockquote>
 
                 <div class="rating-wrapper">
@@ -846,7 +783,7 @@
                   </figure>
 
                   <div>
-                    <h3 class="h4 testi-name">Charles Richard</h3>
+                    <h3 class="h4 testi-name">Lucas</h3>
 
                     <p class="testi-title">Étudiant FISA</p>
                   </div>
@@ -854,7 +791,7 @@
                 </div>
 
                 <blockquote class="testi-text">
-                  "Un service impeccable et des frites exceptionnelles. Nassim et Chadi font du très bon travail !"
+                  "C'est le meilleur club du BDE FISA ! Frit'Int propose des frites exceptionnelles."
                 </blockquote>
 
                 <div class="rating-wrapper">
@@ -900,7 +837,6 @@
 
                   <p class="banner-text">Promotion de 50% cette semaine seulement</p>
 
-                  <button class="btn">Commander</button>
                 </div>
 
               </div>
@@ -913,11 +849,10 @@
                   class="banner-img">
 
                 <div class="banner-item-content">
-                  <h3 class="banner-title">Frites Épicées</h3>
+                  <h3 class="banner-title">Frites Double Cuisson Belges</h3>
 
                   <p class="banner-text">50% de réduction maintenant</p>
 
-                  <button class="btn">Commander</button>
                 </div>
 
               </div>
@@ -934,7 +869,6 @@
 
                   <p class="banner-text">50% de réduction maintenant</p>
 
-                  <button class="btn">Commander</button>
                 </div>
 
               </div>
@@ -947,11 +881,10 @@
                   class="banner-img">
 
                 <div class="banner-item-content">
-                  <h3 class="banner-title">Frites au Fromage</h3>
+                  <h3 class="banner-title">Frites Gaufres</h3>
 
                   <p class="banner-text">Promotion de 50% cette semaine seulement</p>
 
-                  <button class="btn">Commander</button>
                 </div>
 
               </div>
@@ -1002,23 +935,23 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2025-10-01">Oct 01 2025</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Nassim</p>
                     </a>
 
                   </div>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Que pensez-vous de nos recettes de frites au fromage ?</a>
+                    <a href="#" class="card-title" onclick="showFullArticle('article1')">L'inauguration du club Frit'Int et sa naissance</a>
                   </h3>
 
                   <p class="card-text">
-                    Découvrez nos secrets pour préparer les meilleures frites au fromage du campus...
+                    Découvrez l'histoire de la création du club Frit'Int et son inauguration officielle...
                   </p>
 
                   <a href="#" class="btn-link">
@@ -1049,23 +982,23 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2025-10-01">Oct 01 2025</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Nassim</p>
                     </a>
 
                   </div>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Préparation de frites épicées avec de nouveaux ingrédients délicieux.</a>
+                    <a href="#" class="card-title" onclick="showFullArticle('article2')">La présence de Frit'Int au SIF 2025</a>
                   </h3>
 
                   <p class="card-text">
-                    Nassim et Chadi vous révèlent leurs nouvelles recettes de frites épicées avec des ingrédients...
+                    Retour sur la participation exceptionnelle de Frit'Int au Salon International de la Frite 2025...
                   </p>
 
                   <a href="#" class="btn-link">
@@ -1096,23 +1029,23 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2025-10-01">Oct 01 2025</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Nassim</p>
                     </a>
 
                   </div>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Innovation : Frites de patates douces créatives.</a>
+                    <a href="#" class="card-title" onclick="showFullArticle('article3')">Les recettes de Frit'Int</a>
                   </h3>
 
                   <p class="card-text">
-                    Découvrez notre nouvelle gamme de frites de patates douces et nos innovations culinaires...
+                    Découvrez les secrets culinaires de Frit'Int et nos recettes exclusives de frites...
                   </p>
 
                   <a href="#" class="btn-link">
@@ -1156,32 +1089,14 @@
           <a href="" class="logo">Frit'Int<span class="span">.</span></a>
 
           <p class="footer-text">
-            Frit'Int est le club du BDE FISA dirigé par Nassim et Chadi, spécialisé dans la production de frites artisanales de qualité.
+            Frit'Int est le club du BDE FISA dirigé par Nassim et Chadi, spécialisé dans la production de frites de qualité.
           </p>
 
           <ul class="social-list">
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
+              <a href="https://www.linkedin.com/company/frit-int-fisa/?viewAsMember=true" class="social-link" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
 
@@ -1192,76 +1107,20 @@
         <ul class="footer-list">
 
           <li>
-            <p class="footer-list-title">Informations de contact</p>
+            <p class="footer-list-title">Contact</p>
           </li>
 
           <li>
-            <p class="footer-list-item">+33 (0)1 23 45 67 89</p>
+            <p class="footer-list-item">Vous pouvez nous retrouver à Télécom SudParis</p>
           </li>
 
           <li>
-            <p class="footer-list-item">contact@fritint-bde-fisa.fr</p>
-          </li>
-
-          <li>
-            <address class="footer-list-item">Campus FISA, Bureau des Étudiants</address>
+            <p class="footer-list-item">Nassim et Chadi</p>
           </li>
 
         </ul>
 
-        <ul class="footer-list">
 
-          <li>
-            <p class="footer-list-title">Horaires d'ouverture</p>
-          </li>
-
-          <li>
-            <p class="footer-list-item">Lundi-Vendredi: 08:00-22:00</p>
-          </li>
-
-          <li>
-            <p class="footer-list-item">Mardi 16h: Jusqu'à minuit</p>
-          </li>
-
-          <li>
-            <p class="footer-list-item">Samedi: 10:00-16:00</p>
-          </li>
-
-        </ul>
-
-        <form action="" class="footer-form">
-
-          <p class="footer-list-title">Réserver</p>
-
-          <div class="input-wrapper">
-
-            <input type="text" name="full_name" required placeholder="Votre nom" aria-label="Votre nom"
-              class="input-field">
-
-            <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
-              class="input-field">
-
-          </div>
-
-          <div class="input-wrapper">
-
-            <select name="total_person" aria-label="Nombre de personnes" class="input-field">
-              <option value="person">Personne</option>
-              <option value="2 person">2 Personnes</option>
-              <option value="3 person">3 Personnes</option>
-              <option value="4 person">4 Personnes</option>
-              <option value="5 person">5 Personnes</option>
-            </select>
-
-            <input type="date" name="booking_date" aria-label="Date de réservation" class="input-field">
-
-          </div>
-
-          <textarea name="message" required placeholder="Message" aria-label="Message" class="input-field"></textarea>
-
-          <button type="submit" class="btn">Réserver</button>
-
-        </form>
 
       </div>
     </div>
@@ -1269,7 +1128,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright-text">
-          &copy; 2024 <a href="#" class="copyright-link">Frit'Int - BDE FISA</a> Tous droits réservés.
+          &copy; 2025 <a href="#" class="copyright-link">Frit'Int - BDE FISA</a> Tous droits réservés.
         </p>
       </div>
     </div>
