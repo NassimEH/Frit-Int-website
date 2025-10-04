@@ -1545,6 +1545,23 @@ textarea.input-field {
   }
 
   /**
+   * HEADER RESPONSIVE FIX
+   */
+
+  .header .container {
+    padding-inline: 20px;
+  }
+
+  .navbar-link {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  .logo {
+    font-size: 3.2rem !important;
+  }
+
+  /**
    * BULLET POINTS RESPONSIVE (768px)
    */
 
@@ -1979,6 +1996,23 @@ textarea.input-field {
     padding-inline: 10px;
   }
 
+  /**
+   * HEADER RESPONSIVE FIX (480px)
+   */
+
+  .header .container {
+    padding-inline: 15px;
+  }
+
+  .navbar-link {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+
+  .logo {
+    font-size: 2.8rem !important;
+  }
+
   .promo-card .card-text {
     font-size: 12px;
   }
@@ -2062,6 +2096,23 @@ textarea.input-field {
     width: 6px;
     height: 6px;
     margin-inline-end: 6px;
+  }
+
+  /**
+   * HEADER RESPONSIVE FIX (320px)
+   */
+
+  .header .container {
+    padding-inline: 10px;
+  }
+
+  .navbar-link {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  .logo {
+    font-size: 2.4rem !important;
   }
 
 }
