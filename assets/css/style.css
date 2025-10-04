@@ -1168,6 +1168,10 @@ body.active { overflow: hidden; }
   gap: 30px;
 }
 
+.footer-contact {
+  text-align: right;
+}
+
 .footer .logo {
   color: var(--rich-black-fogra-29);
   font-size: 3.2rem;
@@ -1360,6 +1364,10 @@ textarea.input-field {
    */
 
   .footer-top .container { grid-template-columns: 1fr 1fr; }
+  
+  .footer-contact {
+    text-align: right;
+  }
 
 }
 
@@ -1683,7 +1691,11 @@ textarea.input-field {
    * FOOTER
    */
 
-  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1.6fr; }
+  .footer-top .container { grid-template-columns: 1fr 1fr; }
+  
+  .footer-contact {
+    text-align: right;
+  }
 
   .footer-form { margin-block-start: -170px; }
 
@@ -1764,6 +1776,10 @@ textarea.input-field {
    * FOOTER
    */
 
-  .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
+  .footer-top .container { grid-template-columns: 1.4fr 1fr; }
+  
+  .footer-contact {
+    text-align: right;
+  }
 
 }
