@@ -1135,6 +1135,93 @@ body.active { overflow: hidden; }
 
 
 /*-----------------------------------*\
+  #AUTHORS
+\*-----------------------------------*/
+
+.authors {
+  padding-block: 120px;
+  background-color: var(--isabelline);
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-block-start: 50px;
+}
+
+.author-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.author-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.author-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.author-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  transition: transform 0.3s ease;
+}
+
+.author-card:hover .author-photo {
+  transform: scale(1.05);
+}
+
+.author-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.author-name {
+  color: var(--rich-black-fogra-29);
+  margin-block-end: 15px;
+}
+
+.author-description {
+  color: var(--sonic-silver);
+  margin-block-end: 25px;
+  line-height: 1.6;
+}
+
+.author-content .btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--deep-saffron);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.author-content .btn-link:hover {
+  background-color: var(--dark-orange);
+  transform: translateY(-2px);
+}
+
+.author-content .btn-link ion-icon {
+  font-size: 18px;
+}
+
+/*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
@@ -1358,6 +1445,24 @@ textarea.input-field {
   .hero-title { --fs-1: 4.2rem; }
 
 
+
+  /**
+   * AUTHORS
+   */
+
+  .authors-grid { 
+    grid-template-columns: 1fr; 
+    gap: 40px;
+  }
+
+  .author-image {
+    height: 200px;
+  }
+
+  .author-content {
+    padding: 20px;
+    text-align: center;
+  }
 
   /**
    * FOOTER
@@ -1775,6 +1880,23 @@ textarea.input-field {
   /**
    * FOOTER
    */
+
+  /**
+   * AUTHORS
+   */
+
+  .authors-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px;
+  }
+
+  .author-image {
+    height: 220px;
+  }
+
+  .author-content {
+    padding: 25px;
+  }
 
   .footer-top .container { grid-template-columns: 1.4fr 1fr; }
   
