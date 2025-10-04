@@ -737,6 +737,33 @@ body.active { overflow: hidden; }
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+
+.food-menu-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--dark-orange);
+  clip-path: var(--clip-path-1);
+  transform-origin: bottom;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.food-menu-card:hover::after {
+  clip-path: var(--clip-path-2);
+  transform: scaleY(1);
+}
+
+.food-menu-card:hover {
+  transform: translateY(-10px);
+}
+
+.food-menu-card:hover :is(.card-title, .card-text, .category) { 
+  color: var(--white); 
 }
 
 .food-menu-card:focus-within { outline: 1px auto -webkit-focus-ring-color; }
@@ -909,11 +936,20 @@ body.active { overflow: hidden; }
   margin-block-end: 30px;
 }
 
+.testi-list {
+  padding-block-end: 40px;
+  margin-block-end: 20px;
+}
+
 .testi-card {
   background-color: var(--white);
   padding: 40px;
   text-align: left;
   box-shadow: var(--shadow-2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .testi-card .profile-wrapper {
@@ -935,7 +971,10 @@ body.active { overflow: hidden; }
   font-size: var(--fs-4);
 }
 
-.testi-card .testi-text { margin-block: 20px 15px; }
+.testi-card .testi-text { 
+  margin-block: 20px 15px; 
+  flex-grow: 1;
+}
 
 .testi-item {
   min-width: 100%;
@@ -1052,12 +1091,39 @@ body.active { overflow: hidden; }
   background-color: var(--white);
   text-align: left;
   box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--dark-orange);
+  clip-path: var(--clip-path-1);
+  transform-origin: bottom;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.blog-card:hover::after {
+  clip-path: var(--clip-path-2);
+  transform: scaleY(1);
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card:hover :is(.card-title, .card-text, .meta-info) { 
+  color: var(--white); 
 }
 
 .blog-card .card-banner {
   position: relative;
   aspect-ratio: 1 / 0.65;
-  background-color: var(--gainsboro);
+  background-color: var(--white);
 }
 
 .blog-card .badge {
@@ -1069,7 +1135,22 @@ body.active { overflow: hidden; }
   --padding-block: 5px;
 }
 
-.blog-card .card-content { padding: 30px; }
+.blog-card .card-content { 
+  padding: 30px; 
+  position: relative;
+}
+
+.blog-card .card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--dark-orange), transparent);
+  border-radius: 1px;
+}
 
 .blog-card .card-meta-wrapper {
   display: flex;
@@ -1938,7 +2019,7 @@ textarea.input-field {
    * TESTIMONIALS
    */
 
-  .testi-list { padding-block-end: 0; }
+  .testi-list { padding-block-end: 20px; }
 
 
 
