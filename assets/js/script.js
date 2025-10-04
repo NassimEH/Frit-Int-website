@@ -97,8 +97,8 @@ window.addEventListener("scroll", function () {
  * food menu filter
  */
 
-const filterBtns = document.querySelectorAll("[data-filter]");
-const foodMenuItems = document.querySelectorAll("[data-filter]");
+const filterBtns = document.querySelectorAll(".filter-btn[data-filter]");
+const foodMenuItems = document.querySelectorAll(".food-menu-list li[data-filter]");
 
 filterBtns.forEach(btn => {
   btn.addEventListener("click", function () {
@@ -130,7 +130,11 @@ filterBtns.forEach(btn => {
  * blog articles modal
  */
 
-function showFullArticle(articleId) {
+function showFullArticle(articleId, event) {
+  // Empêcher le comportement par défaut du lien
+  if (event) {
+    event.preventDefault();
+  }
   const articles = {
     'article1': {
       title: "L'inauguration du club Frit'Int et sa naissance",
@@ -214,29 +218,89 @@ function showFullArticle(articleId) {
     
     const modalContent = document.createElement('div');
     modalContent.style.cssText = `
-      background: white;
-      max-width: 800px;
-      max-height: 80vh;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      max-width: 900px;
+      max-height: 85vh;
       overflow-y: auto;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 0;
+      border-radius: 20px;
       position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      border: 2px solid #ff9d2d;
     `;
     
     const closeBtn = document.createElement('button');
     closeBtn.innerHTML = '×';
     closeBtn.style.cssText = `
       position: absolute;
-      top: 10px;
-      right: 15px;
-      background: none;
+      top: 15px;
+      right: 20px;
+      background: #ff9d2d;
       border: none;
-      font-size: 30px;
+      font-size: 24px;
       cursor: pointer;
-      color: #666;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10001;
+      transition: all 0.3s ease;
     `;
     
-    modalContent.innerHTML = article.content;
+    closeBtn.addEventListener('mouseenter', function() {
+      this.style.background = '#e8891e';
+      this.style.transform = 'scale(1.1)';
+    });
+    
+    closeBtn.addEventListener('mouseleave', function() {
+      this.style.background = '#ff9d2d';
+      this.style.transform = 'scale(1)';
+    });
+    
+    // Create header
+    const header = document.createElement('div');
+    header.style.cssText = `
+      background: linear-gradient(135deg, #ff9d2d 0%, #ff6b35 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 18px 18px 0 0;
+      text-align: center;
+      position: relative;
+    `;
+    
+    const title = document.createElement('h1');
+    title.innerHTML = article.title;
+    title.style.cssText = `
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    `;
+    
+    header.appendChild(title);
+    
+    // Create content wrapper
+    const contentWrapper = document.createElement('div');
+    contentWrapper.style.cssText = `
+      padding: 40px;
+      line-height: 1.8;
+      font-size: 16px;
+    `;
+    
+    // Style the article content
+    const styledContent = article.content
+      .replace(/<h2>/g, '<h2 style="color: #ff9d2d; font-size: 24px; margin: 30px 0 15px 0; border-bottom: 2px solid #ff9d2d; padding-bottom: 10px;">')
+      .replace(/<h3>/g, '<h3 style="color: #333; font-size: 20px; margin: 25px 0 12px 0; font-weight: 600;">')
+      .replace(/<p>/g, '<p style="margin: 15px 0; color: #555; text-align: justify;">')
+      .replace(/<em>/g, '<em style="color: #ff9d2d; font-weight: 600; font-style: italic; display: block; text-align: center; margin-top: 30px; padding: 15px; background: #fff5e6; border-left: 4px solid #ff9d2d;">');
+    
+    contentWrapper.innerHTML = styledContent;
+    
+    modalContent.appendChild(header);
+    modalContent.appendChild(contentWrapper);
     modalContent.appendChild(closeBtn);
     modal.appendChild(modalContent);
     document.body.appendChild(modal);
