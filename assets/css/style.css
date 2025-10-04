@@ -1550,12 +1550,17 @@ textarea.input-field {
 
   .about-list {
     padding-inline: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    position: relative;
+    z-index: 1000;
   }
 
   .about-list .about-item {
     font-size: 14px;
     line-height: 1.5;
-    margin-block-end: 12px;
+    margin-block-end: 0;
   }
 
   .about-list .about-item .span {
@@ -2005,12 +2010,17 @@ textarea.input-field {
 
   .about-list {
     padding-inline: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    position: relative;
+    z-index: 1000;
   }
 
   .about-list .about-item {
     font-size: 13px;
     line-height: 1.4;
-    margin-block-end: 10px;
+    margin-block-end: 0;
   }
 
   .about-list .about-item .span {
@@ -2029,12 +2039,17 @@ textarea.input-field {
 
   .about-list {
     padding-inline: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    position: relative;
+    z-index: 1000;
   }
 
   .about-list .about-item {
     font-size: 12px;
     line-height: 1.3;
-    margin-block-end: 8px;
+    margin-block-end: 0;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
