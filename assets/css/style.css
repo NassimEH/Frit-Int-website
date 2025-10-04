@@ -279,8 +279,14 @@ body.active { overflow: hidden; }
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--deep-saffron);
   border: 3px solid var(--deep-saffron);
   border-radius: 50px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tangerine);
+  border-color: var(--tangerine);
 }
 
 .section-title > .span {
