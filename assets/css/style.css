@@ -153,6 +153,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 80px;
 }
 
 body.active { overflow: hidden; }
@@ -336,29 +337,29 @@ body.active { overflow: hidden; }
   --color: var(--white);
   --btn-color: var(--champagne-pink);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding-block: 20px;
   border-block-end: 1px solid var(--champagne-pink_20);
-  z-index: 4;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .header.active {
   --color: var(--rich-black-fogra-29);
   --btn-color: var(--rich-black-fogra-29);
 
-  position: fixed;
-  top: -86px;
   background-color: var(--white);
   box-shadow: var(--shadow-1);
   animation: slideIn 0.5s ease-out forwards;
 }
 
 @keyframes slideIn {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100%); }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
 }
 
 .header .container {
@@ -1584,7 +1585,7 @@ textarea.input-field {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
   }
 
   .about-list .about-item {
@@ -2074,7 +2075,7 @@ textarea.input-field {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
   }
 
   .about-list .about-item {
@@ -2103,7 +2104,7 @@ textarea.input-field {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     position: relative;
-    z-index: 1000;
+    z-index: 10;
   }
 
   .about-list .about-item {
