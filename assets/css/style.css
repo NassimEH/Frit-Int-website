@@ -1444,6 +1444,106 @@ textarea.input-field {
 
   .hero-title { --fs-1: 4.2rem; }
 
+  /**
+   * HERO RESPONSIVE
+   */
+
+  .hero-content {
+    text-align: center;
+    margin-block-end: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero-banner {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  /**
+   * PROMO RESPONSIVE
+   */
+
+  .promo-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .promo-card {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .promo-card .card-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .promo-card .card-banner {
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  /**
+   * FOOD MENU RESPONSIVE
+   */
+
+  .filter-list {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: auto;
+  }
+
+  .food-menu-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .food-menu-card {
+    padding: 20px;
+  }
+
+  .food-menu-card .card-banner {
+    max-width: 250px;
+    margin-inline: auto;
+  }
+
+  /**
+   * MOBILE RESPONSIVE (320px+)
+   */
+
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    padding-inline: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .section-text {
+    font-size: 14px;
+    padding-inline: 20px;
+  }
+
+  .container {
+    padding-inline: 15px;
+  }
+
 
 
   /**
@@ -1820,6 +1920,62 @@ textarea.input-field {
 
 
 
+
+/**
+ * responsive for small screens (320px - 480px)
+ */
+
+@media (max-width: 480px) {
+  
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-text {
+    font-size: 13px;
+    padding-inline: 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+
+  .section-text {
+    font-size: 13px;
+    padding-inline: 15px;
+  }
+
+  .container {
+    padding-inline: 10px;
+  }
+
+  .promo-card .card-text {
+    font-size: 12px;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .food-menu-card .card-banner {
+    max-width: 200px;
+  }
+
+  .author-content {
+    padding: 15px;
+  }
+
+  .author-name {
+    font-size: 1.5rem;
+  }
+
+  .author-description {
+    font-size: 13px;
+  }
+
+}
 
 /**
  * responsive for larger than 1200px screen
