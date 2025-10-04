@@ -1,54 +1,95 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/foodie)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/foodie?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/foodie?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/5XnX83goEZo?style=social)](https://youtu.be/5XnX83goEZo)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/NassimEH/Frit-Int-website)
+  ![GitHub stars](https://img.shields.io/github/stars/NassimEH/Frit-Int-website?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/NassimEH/Frit-Int-website?style=social)
 
   <br />
   <br />
 
-  <h2 align="center">Foodie - Fast food website</h2>
+  <h2 align="center">Frit'Int - Le club de frites du BDE FISA</h2>
 
-  Foodie is a fully responsive fast food website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+  Frit'Int est le site web officiel du club de frites du BDE FISA de Télécom SudParis. <br />Site entièrement responsive, développé avec HTML, CSS et JavaScript.
 
-  <a href="https://codewithsadee.github.io/foodie/"><strong>➥ Live Demo</strong></a>
+  <a href="https://frit-int-website.vercel.app/"><strong>➥ Site en ligne</strong></a>
 
 </div>
 
 <br />
 
-### Demo Screeshots
+### À propos de Frit'Int
 
-![Foodie Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+Frit'Int est un club étudiant créé par **Nassim** et **Chadi**, membres actifs du BDE FISA de Télécom SudParis. Notre mission est de révolutionner la culture culinaire du campus en proposant les meilleures frites du campus.
 
-### Prerequisites
+#### 🍟 Nos spécialités
+- **Frites classiques** - Les frites traditionnelles parfaitement dorées
+- **Frites épicées** - Pour ceux qui aiment les saveurs relevées
+- **Frites double cuisson belges** - L'authenticité belge à la française
+- **Frites au fromage** - Le mélange parfait entre gourmandise et tradition
+- **Frites gaufres** - L'innovation qui fait la différence
+- **Boissons** - Pour accompagner vos frites favorites
 
-Before you begin, ensure you have met the following requirements:
+#### 🎯 Notre vision
+Actuellement spécialisés dans les frites, nous avons pour ambition d'étendre notre offre à toutes les formes de la pomme de terre dans un avenir proche.
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+### Captures d'écran
 
-### Run Locally
+![Frit'Int Desktop Demo](./readme-images/desktop.png "Démonstration Desktop")
 
-To run **Foodie** locally, run this command on your git bash:
+### Fonctionnalités
 
-Linux and macOS:
+- ✅ **Design responsive** - Optimisé pour tous les appareils
+- ✅ **Menu interactif** - Filtres fonctionnels par catégorie
+- ✅ **Blog intégré** - Articles sur l'actualité du club
+- ✅ **Section auteurs** - Présentation des fondateurs
+- ✅ **Témoignages clients** - Avis des étudiants du campus
+- ✅ **Animations fluides** - Effets hover et transitions CSS
+- ✅ **Modal d'articles** - Lecture complète des articles de blog
+
+### Technologies utilisées
+
+- **HTML5** - Structure sémantique
+- **CSS3** - Design moderne avec Flexbox et Grid
+- **JavaScript** - Interactivité et fonctionnalités dynamiques
+- **Ion Icons** - Icônes vectorielles
+- **Responsive Design** - Adaptation mobile-first
+
+### Installation locale
+
+Pour exécuter **Frit'Int** localement, exécutez cette commande dans votre terminal :
+
+Linux et macOS :
 
 ```bash
-sudo git clone https://github.com/codewithsadee/foodie.git
+git clone https://github.com/NassimEH/Frit-Int-website.git
+cd Frit-Int-website
 ```
 
-Windows:
+Windows :
 
 ```bash
-git clone https://github.com/codewithsadee/foodie.git
+git clone https://github.com/NassimEH/Frit-Int-website.git
+cd Frit-Int-website
 ```
+
+Puis ouvrez le fichier `index.html` dans votre navigateur web.
+
+### Déploiement
+
+Le site est déployé sur **Vercel** et accessible à l'adresse : https://frit-int-website.vercel.app/
 
 ### Contact
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+- **Nassim** - [LinkedIn](https://www.linkedin.com/in/nassim-elhaddad/)
+- **Chadi** - [LinkedIn](https://www.linkedin.com/in/chadi-mangle/)
+- **BDE FISA** - Télécom SudParis
 
-### License
+### Licence
 
-This project is **free to use** and does not contains any license.
+Ce projet est **libre d'utilisation** et ne contient aucune licence restrictive.
+
+---
+
+<div align="center">
+  <p>Créé avec ❤️ par Nassim et Chadi pour le BDE FISA</p>
+</div>
